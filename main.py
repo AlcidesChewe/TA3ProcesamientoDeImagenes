@@ -140,19 +140,19 @@ def prepare_dataset():
         digits.append(digits_read)
     images = np.vstack(images)
     digits = np.concatenate(digits)
-    np.save('X.npy', images)
-    np.save('y.npy', digits)
+    np.save('X1.npy', images)
+    np.save('y1.npy', digits)
     return "OK!"
 
 
 @app.route('/X.npy', methods=['GET'])
 def download_X():
-    return send_file('X.npy')
+    return send_file('X1.npy')
 
 
 @app.route('/y.npy', methods=['GET'])
 def download_y():
-    return send_file('y.npy')
+    return send_file('y1.npy')
 
 
 if __name__ == "__main__":
