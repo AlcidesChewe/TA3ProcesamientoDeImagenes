@@ -5,7 +5,7 @@ from skimage import io
 import base64
 import glob
 import numpy as np
-#owo
+
 app = Flask(__name__)
 
 main_html = """
